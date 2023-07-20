@@ -2,3 +2,7 @@
 $(document).ready(function() {
   $('#dataTable').DataTable();
 });
+
+new DataTable('#dataTable', {
+  scrollX: true
+});
