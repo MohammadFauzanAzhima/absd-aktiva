@@ -151,11 +151,56 @@
                     <p></p>
                     <p></p>
 
+                    <!-- Modal -->
+                    <form action="" method="POST">
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalCenterTitle">Create User</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmailAddress">Email Address <span style="color: red;">*</span></label>
+                                        <input type="EmailAddress" class="form-control" id="exampleInputEmailAddress" aria-describedby="EmailAddress" placeholder="Email Address">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="exampleInputPassword">Password <span style="color: red;">*</span></label>
+                                        <input type="Password" class="form-control" id="exampleInputPassword" aria-describedby="Password" placeholder="Password">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="exampleInputNama">Nama <span style="color: red;">*</span></label>
+                                        <input type="Nama" class="form-control" id="exampleInputNama" placeholder="Nama">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="exampleInputJabatan">Jabatan <span style="color: red;">*</span></label>
+                                        <input type="Jabatan" class="form-control" id="exampleInputJabatan" placeholder="Jabatan">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="exampleInputAkses">Akses <span style="color: red;">*</span></label>
+                                        <input type="Akses" class="form-control" id="exampleInputAkses" placeholder="Akses">
+                                      </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </form>
+
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i> Tambah</a>
+                            <div class="card-header py-3">
+                                <a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                                    <i class="fas fa-plus fa-sm text-white-50"></i> Tambah
+                                </a>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
