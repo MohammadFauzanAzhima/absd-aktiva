@@ -1981,6 +1981,9 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: 1rem;
+  width: 50%;
+  justify-content: space-between;
+  padding-left: 10px;
 }
 
 .form-text {
