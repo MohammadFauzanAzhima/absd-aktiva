@@ -47,23 +47,22 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-                    aria-controls="collapseTwo">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Aset</span>
                 </a>
-                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
-                    data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item active" href="inventariskantor.html">Inventaris Kantor</a>
+                        <a class="collapse-item" href="inventariskantor.html">inventaris Kantor</a>
                         <a class="collapse-item" href="furniture&fixture.html">Furniture & Fixture</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Maintenance -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="maintenance.html">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Maintenance</span></a>
@@ -147,7 +146,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Inventaris Kantor</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Maintenance</h1>
                     <p></p>
                     <p></p>
 
@@ -157,24 +156,24 @@
                             <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle" style="padding-left: 10px;">Tambahkan inventaris Kantor</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle" style="padding-left: 10px;">Tambahkan Barang Yang Di Maintenance</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
-                                </button>
+                                    </button>
                                 </div>
                                 <div class="modal-body" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
                                     <div class="form-group">
                                         <label for="exampleInputID">ID <span style="color: red;">*</span></label>
                                         <input type="ID" class="form-control" id="exampleInputID" aria-describedby="ID" placeholder="Input ID">
                                     </div>
-                                    <div class="form-group ">
+                                    <div class="form-group">
                                         <label for="exampleInputCodeBarang">Kode Barang <span style="color: red;">*</span></label>
                                         <select class="form-control" id="exampleInputCodeBarang">
-                                            <option>01</option>
-                                            <option>02</option>
-                                            <option>03</option>
-                                            <option>04</option>
-                                            <option>05</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -192,12 +191,12 @@
                                     <div class="form-group">
                                         <label for="exampleInputSharing">Sharing <span style="color: red;">*</span></label>
                                         <select class="form-control" id="exampleInputSharing">
-                                        <option>YA</option>
-                                        <option>TIDAK</option>
+                                            <option>YA</option>
+                                            <option>TIDAK</option>
                                         </select>
-                                    </div>
+                                        </div>
                                     <div class="form-group">
-                                        <label for="exampleInputDate">Tgl Inventaris <span style="color: red;">*</span></label>
+                                        <label for="exampleInputDate">Tgl Furniture <span style="color: red;">*</span></label>
                                         <input type="Date" class="form-control" id="exampleInputDate" placeholder="Tgl Inventaris">
                                     </div>
                                     <div class="form-group">
@@ -210,120 +209,90 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
                             </div>
                             </div>
                         </div>
                     </form>
 
-                    <!-- DataTales Example -->
+                    <!-- DataTales -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="button" data-toggle="modal" data-target="#exampleModalCenter">
                                 <i class="fas fa-plus fa-sm text-white-50"></i> Tambah
                             </a>
-                        </div>
+                        </div>  
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-bordered text-center" id="dataTable" width="auto" cellspacing="0">
                                     <thead>
-                                        <tr>
+                                        <tr >
                                             <th>ID</th>
-                                            <th>Kode Barang</th>
-                                            <th>Kategori</th>
-                                            <th>Koneksi</th>
-                                            <th>Computer Name/IP</th>
-                                            <th>Sharing</th>
-                                            <th>Tgl Inventaris</th>
-                                            <th>Lokasi</th>
-                                            <th>Keterangan</th>
-                                            <th>Action</th>
+                                            <th>Nama Barang</th>
+                                            <th>Jenis Barang</th>
+                                            <th>Tanggal Jatuh Tempo</th>
+                                            <th>Jumlah Bayar</th>
+                                            <th>Accept or Reject</th>
                                         </tr>
                                     </thead>
                                     
                                     <tbody>
                                         <tr>
-                                            <td>HW-001/UBINFRA/2022</td>
+                                            <td>1</td>
                                             <td>01</td>
                                             <td>Printer</td>
                                             <td>USB</td>
                                             <td>ABSD-BC-PC</td>
-                                            <td>YA</td>
-                                            <td>2023-03-23</td>
-                                            <td>Kantor Korporat, General Affair, Lantai Basement</td>
-                                            <td>Printer gaming</td>
-                                            <td class="d-flex">
+                                            <td class="d-flex justify-content-center">
                                                 <button class="btn btn-danger btn-sm"><img src="img/trash-2.png" width="20px" height="19px"></button>
                                                 <button class="btn btn-warning btn-sm mx-2"><img src="img/edit.png" width="20px" height="21px"></button>
-                                                <button class="btn btn-primary btn-sm"><img src="img/Vector.png" width="20px" height="19px"></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>HW-002/UBINFRA/2022</td>
+                                            <td>2</td>
                                             <td>02</td>
                                             <td>Printer</td>
                                             <td>USB</td>
                                             <td>ABSD-BC-PC</td>
-                                            <td>YA</td>
-                                            <td>2023-03-23</td>
-                                            <td>Kantor Korporat, General Affair, Lantai Basement</td>
-                                            <td>Printer gaming</td>
-                                            <td class="d-flex">
+                                            <td class="d-flex justify-content-center">
                                                 <button class="btn btn-danger btn-sm"><img src="img/trash-2.png" width="20px" height="19px"></button>
                                                 <button class="btn btn-warning btn-sm mx-2"><img src="img/edit.png" width="20px" height="21px"></button>
-                                                <button class="btn btn-primary btn-sm"><img src="img/Vector.png" width="20px" height="19px"></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>HW-003/UBINFRA/2022</td>
-                                            <td>03</td>
+                                            <td>2</td>
+                                            <td>02</td>
                                             <td>Printer</td>
                                             <td>USB</td>
                                             <td>ABSD-BC-PC</td>
-                                            <td>YA</td>
-                                            <td>2023-03-23</td>
-                                            <td>Kantor Korporat, General Affair, Lantai Basement</td>
-                                            <td>Printer gaming</td>
-                                            <td class="d-flex">
+                                            <td class="d-flex justify-content-center">
                                                 <button class="btn btn-danger btn-sm"><img src="img/trash-2.png" width="20px" height="19px"></button>
                                                 <button class="btn btn-warning btn-sm mx-2"><img src="img/edit.png" width="20px" height="21px"></button>
-                                                <button class="btn btn-primary btn-sm"><img src="img/Vector.png" width="20px" height="19px"></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>HW-004/UBINFRA/2022</td>
-                                            <td>04</td>
+                                            <td>2</td>
+                                            <td>02</td>
                                             <td>Printer</td>
                                             <td>USB</td>
                                             <td>ABSD-BC-PC</td>
-                                            <td>YA</td>
-                                            <td>2023-03-23</td>
-                                            <td>Kantor Korporat, General Affair, Lantai Basement</td>
-                                            <td>Printer gaming</td>
-                                            <td class="d-flex">
+                                            <td class="d-flex justify-content-center">
                                                 <button class="btn btn-danger btn-sm"><img src="img/trash-2.png" width="20px" height="19px"></button>
                                                 <button class="btn btn-warning btn-sm mx-2"><img src="img/edit.png" width="20px" height="21px"></button>
-                                                <button class="btn btn-primary btn-sm"><img src="img/Vector.png" width="20px" height="19px"></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>HW-005/UBINFRA/2022</td>
-                                            <td>05</td>
+                                            <td>2</td>
+                                            <td>02</td>
                                             <td>Printer</td>
                                             <td>USB</td>
                                             <td>ABSD-BC-PC</td>
-                                            <td>YA</td>
-                                            <td>2023-03-23</td>
-                                            <td>Kantor Korporat, General Affair, Lantai Basement</td>
-                                            <td>Printer gaming</td>
-                                            <td class="d-flex">
+                                            <td class="d-flex justify-content-center">
                                                 <button class="btn btn-danger btn-sm"><img src="img/trash-2.png" width="20px" height="19px"></button>
                                                 <button class="btn btn-warning btn-sm mx-2"><img src="img/edit.png" width="20px" height="21px"></button>
-                                                <button class="btn btn-primary btn-sm"><img src="img/Vector.png" width="20px" height="19px"></button>
                                             </td>
                                         </tr>
-                                        
                                     </tbody>
                                 </table>
                             </div>
