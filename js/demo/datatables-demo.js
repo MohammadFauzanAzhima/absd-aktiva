@@ -4,3 +4,9 @@ $(document).ready(function() {
     scrollX: true
   });
 });
+
+$(document).ready(function() {
+  $('#dataTable2').DataTable({
+    scrollX: true
+  });
+});
