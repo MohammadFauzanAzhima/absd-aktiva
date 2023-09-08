@@ -223,76 +223,78 @@
                     </div>
 
                     <!-- Content Row -->
-                    <div class="row">
+                    <div class="row" style="margin-bottom: 10px;">
 
-                        <!-- Card -->
-                        
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
-                                <div class="card border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-dark text-uppercase text-center mb-1">15</div>
-                                                <div class="h5 mb-0 text-gray-800 text-center">Furniture</div>
-                                                <hr>
-                                            </div>
+                        <!-- Calender -->
+                        <div class="wrapper">
+                            <header>
+                              <p class="current-date"></p>
+                              <div class="icons">
+                                <span id="prev" class="fas fa-angle-left"></span>
+                                <span id="next" class="fas fa-angle-right"></span>
+                              </div>
+                            </header>
+                            <div class="calendar">
+                              <ul class="weeks">
+                                <li>Sun</li>
+                                <li>Mon</li>
+                                <li>Tue</li>
+                                <li>Wed</li>
+                                <li>Thu</li>
+                                <li>Fri</li>
+                                <li>Sat</li>
+                              </ul>
+                              <ul class="days"></ul>
+                            </div>
+                          </div>
+                          <!-- End of Calender-->
+
+                        <!-- Weather -->
+                        <div class="container">
+                            <div class="header">
+                                <div class="search-box">
+                                    <input type="text" placeholder="Enter your location" class="input-box">
+                    
+                                    <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+                                </div>
+                            </div>
+                    
+                            <div class="location-not-found">
+                                <h1>Sorry, Location not found!!!</h1>
+                                <img src="img/404.png" alt="404 Error">
+                            </div>
+                    
+                            <div class="weather-body">
+                                <img src="/assets/cloud.png" alt="Weather Image" class="weather-img">
+                    
+                                <div class="weather-box">
+                                    <p class="temperature">0 <sup>°C</sup></p>
+                                    <p class="description">light rain</p>
+                                </div>
+                    
+                                <div class="weather-details">
+                                    <div class="humidity">
+                                        <i class="fa-sharp fa-solid fa-droplet"></i>
+                                        <div class="text">
+                                            <span id="humidity">45%</span>
+                                            <p>Humidity</p>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="wind">
+                                        <i class="fa-solid fa-wind"></i>
+                                        <div class="text">
+                                            <span id="wind-speed">12Km/H</span>
+                                            <p>Wind Speed</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div data-aos="fade-down" data-aos-delay="50" data-aos-duration="1300">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-dark text-uppercase text-center mb-1">10</div>
-                                                <div class="h5 mb-0 text-gray-800 text-center">Inventaris</div>
-                                                <hr>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div data-aos="fade-down" data-aos-delay="50" data-aos-duration="1600">
-                                <div class="card border-left-warning shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-dark text-uppercase text-center mb-1">10</div>
-                                                <div class="h5 mb-0 text-gray-800 text-center">Maintenance</div>
-                                                <hr>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div data-aos="fade-down" data-aos-delay="100" data-aos-duration="1900">
-                                <div class="card border-left-danger shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-dark text-uppercase text-center mb-1">10</div>
-                                                <div class="h5 mb-0 text-gray-800 text-center">Request</div>
-                                                <hr>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    
 
                     </div>
-                    <!-- End of Card-->
+                    <!-- End of Weather-->
 
                     <!-- Content Row -->
                     <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1250">
@@ -305,6 +307,7 @@
                             </div>                            
                         </div>
                     </div>
+                    
 
 
                     <!-- Notification order  -->
@@ -350,6 +353,11 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <script src="js/calender.js" defer></script>
+
+    <script src="js/weather.js"></script>
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
 
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
