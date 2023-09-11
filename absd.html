@@ -303,7 +303,7 @@
                                 <h6 class="m-0 font-weight-bold text-dark text-center">Penambahan Aset Per Bulan </h6>
                                 </div>
                             <div class="d-flex justify-content-center">
-                            <canvas id="myChart" style="width:100%;max-width:1000px"></canvas>
+                            <canvas id="barChart" style="width:100%;max-width:1000px"></canvas>
                             </div>                            
                         </div>
                     </div>
@@ -371,30 +371,54 @@
         // untuk animasi
         AOS.init();
     </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script>
-        var xValues = ["Furniture", "Inventaris", "Maintenance", "Request"];
-        var yValues = [10, 10, 13, 1];
-        var barColors = ["red", "green","blue","orange"];
-        
-        new Chart("myChart", {
-        type: "bar",
-        data: {
-            labels: xValues,
-            datasets: [{
-            backgroundColor: barColors,
-            data: yValues
-            }]
-        },
-        options: {
-            legend: {display: false},
-            title: {
-            display: true,
-            text: "World Wine Production 2018"
+    var canvas = document.getElementById("barChart");
+    var ctx = canvas.getContext('2d');
+
+    // Global Options:
+    Chart.defaults.global.defaultFontColor = 'black';
+    Chart.defaults.global.defaultFontSize = 16;
+
+
+    // Data with datasets options
+    var data = {
+    labels: ["Vanilla", "Chocolate", "Strawberry", "i want to frontend :)"],
+    datasets: [
+        {
+            label:"Jumlah Semua Data",
+            
+            backgroundColor: [
+                'red',
+                'blue',
+                'yellow',
+                'grey'
+            ],
+            data: [2, 1, 1, 1]
             }
-        }
-        });
-        </script>
+        ]
+    };
+
+    // Notice how nested the beginAtZero is
+    var options = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+    };
+
+    // Chart declaration:
+    var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options
+    });
+
+    </script>
 
 
 
