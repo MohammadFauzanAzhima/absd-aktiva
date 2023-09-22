@@ -10,61 +10,52 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
     /* * {border: 1px solid red; } */
-    img {
-      -webkit-user-drag: none;
-      user-select: none;
+      img {
+        -webkit-user-drag: none;
+        user-select: none;
+      }
+      html,
+      body{
+          height: 100%;
+          background: linear-gradient(41deg, rgba(180,184,164,1) 31%, rgba(137,235,255,1) 100%);
+          font-family: 'Montserrat', sans-serif;
+      }
+    
+      .background{
+      width: 430px;
+      height: 520px;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      left: 50%;
+      top: 50%;
     }
-    html,
-    body{
-        height: 100%;
-        background-color: gray;
-        font-family: 'Montserrat', sans-serif;
+  
+    .background .shape{
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      border-radius: 50%;
     }
-
-    .background{
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-  }
-
-  .background .shape{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-  }
-.shape:nth-child(1){
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
-}
-.shape:nth-child(2){
-    background: linear-gradient(90deg, rgba(154,113,90,1) 0%, rgba(180,26,15,1) 70%);
-    right: -10px;
-    bottom: -5px;
-}
-.shape:nth-child(3){
-    background: linear-gradient(
-        #000000,
-        #f09819
-    );
-    left: -140px;
-    bottom: -5px;
-}
-.shape:nth-child(4){
-    background: linear-gradient(
-        #f09819,
-        #FE0000
-    );
-    right: -50px;
-    top: -80px;
-}
+    .shape:nth-child(1){
+        background: linear-gradient(237deg, rgba(180,184,164,1) 31%, rgba(137,235,255,1) 100%);
+        left: -80px;
+        top: -80px;
+    }
+    .shape:nth-child(2){
+        background: linear-gradient(237deg, rgba(180,184,164,1) 31%, rgba(137,235,255,1) 100%);
+        right: -10px;
+        bottom: -5px;
+    }
+    .shape:nth-child(3){
+        background: linear-gradient(237deg, rgba(180,184,164,1) 31%, rgba(137,235,255,1) 100%);
+        left: -140px;
+        bottom: -5px;
+    }
+    .shape:nth-child(4){
+        background: linear-gradient(237deg, rgba(180,184,164,1) 31%, rgba(137,235,255,1) 100%);
+        right: -50px;
+        top: -80px;
+    }
     
     .global-container{
         height: 100%;
@@ -114,11 +105,11 @@
             <div class="card-text" style="color: white;">
                 <form>
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <label for="exampleInputEmail1" class="form-label text-black">Email address</label>
                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off">
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <label for="exampleInputPassword1" class="form-label text-black">Password</label>
                       <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="password">
                     </div>
                     <div class="d-grid gap-2 mt-5">
